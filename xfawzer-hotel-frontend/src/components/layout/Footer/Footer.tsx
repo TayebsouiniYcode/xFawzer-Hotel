@@ -15,12 +15,12 @@ const Footer: React.FC<FooterProps> = ({
   year = new Date().getFullYear()
 }) => {
   return (
-    <footer className="bg-primary text-white py-12">
+    <footer className="bg-blue-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">LuxStay</h3>
-            <p className="mb-4">Votre destination de luxe pour un séjour inoubliable au cœur de Paris.</p>
+            <p className="mb-4">Votre destination de luxe pour un séjour inoubliable au cœur de Youssoufia.</p>
             <div className="flex space-x-4">
               {socials.map((social, index) => (
                 <a 
@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({
         </div>
         
         <div className="border-t border-blue-800 mt-8 pt-8 text-center">
-          <p>&copy; {year} LuxStay. Tous droits réservés.</p>
+          <p>&copy; {year} xFawzer | Tayeb SOUINI. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

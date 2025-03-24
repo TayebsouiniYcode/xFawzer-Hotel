@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageUrl }) => {
             <Button href="#reserver" variant="primary" size="lg">
               Réserver maintenant
             </Button>
-            <Button href="#chambres" variant="outline" size="lg">
+            <Button href="#chambres" variant="secondary" size="lg">
               Voir les chambres
             </Button>
           </div>

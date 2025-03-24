@@ -55,9 +55,26 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
         </nav>
         
         <div className="hidden md:block">
+          <div className='flex gap-4'>
+          <div>
           <Button href="#reserver" variant="primary">
             Réserver
           </Button>
+          </div>
+          
+          <div>
+          <Button href="/logn" variant="primary">
+            Login
+          </Button>
+          </div>
+
+          <div>
+          <Button href="/register" variant="outline">
+            Register
+          </Button>
+          </div>
+          </div>
+
         </div>
         
         <button 
