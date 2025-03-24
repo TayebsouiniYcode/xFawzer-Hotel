@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
     <header className={`bg-white shadow-md fixed w-full z-10 transition-all ${isScrolled ? 'py-2' : 'py-3'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-primary">LuxStay</h1>
+          <h1 className="text-2xl font-bold text-primary">xFawzer</h1>
         </div>
         
         <nav className="hidden md:flex space-x-8">
@@ -56,9 +56,25 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
         </nav>
         
         <div className="hidden md:block">
-          <Button href="#reserver" variant="primary">
-            Réserver
-          </Button>
+          <div className='flex gap-3'>
+            <div>
+              <Button href="#reserver" variant="primary">
+                Réserver
+              </Button>
+            </div>
+
+            <div>
+              <Button href="/login" variant="primary">
+                Sign in
+              </Button>
+            </div>
+
+            <div>
+              <Button href="/register" variant="outline">
+                Sign up
+              </Button>
+            </div>
+          </div>
         </div>
         
         <button 

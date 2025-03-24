@@ -1,22 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import LoginForm, { LoginFormData } from '../../components/auth/LoginForm';
+import AuthLayout from '../../components/layout/AuthLayout';
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
+
   // Form handlers
   const handleLoginSubmit = (data: LoginFormData) => {
     console.log('Login form submitted:', data);
     // Implement your login logic here
+    // After successful login, navigate to home or dashboard
+    // navigate('/');
   };
   
   const handleForgotPassword = () => {
     console.log('Forgot password clicked');
     // Navigate to forgot password page or show modal
+    // navigate('/forgot-password');
   };
   
   const handleRegister = () => {
     console.log('Register clicked');
     // Navigate to register page
-    window.location.href = 'register.html';
+    navigate('/register');
   };
   
   const handleSocialLogin = (provider: string) => {
@@ -24,56 +31,32 @@ const Login: React.FC = () => {
     // Implement social login logic
   };
   
-  const handleBackToHome = () => {
-    window.location.href = 'index.html';
-  };
+  const footerContent = (
+    <p className="text-gray-600">
+      Vous n'avez pas de compte? 
+      <a 
+        href="/register" 
+        className="text-primary font-semibold hover:underline ml-1"
+
+      >
+        S'inscrire
+      </a>
+    </p>
+  );
   
   return (
-    <div className="font-sans text-gray-800 bg-gray-50 min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-primary">LuxStay</h1>
-          <p className="text-gray-600 mt-2">Connectez-vous à votre compte</p>
-        </div>
-        
-        {/* Login Form */}
-        <LoginForm 
-          onSubmit={handleLoginSubmit}
-          onForgotPassword={handleForgotPassword}
-          onRegister={handleRegister}
-          onSocialLogin={handleSocialLogin}
-        />
-        
-        {/* Register Link */}
-        <div className="text-center mt-6">
-          <p className="text-gray-600">
-            Vous n'avez pas de compte? 
-            <a 
-              href="#" 
-              className="text-primary font-semibold hover:underline ml-1"
-              onClick={(e) => {
-                e.preventDefault();
-                handleRegister();
-              }}
-            >
-              S'inscrire
-            </a>
-          </p>
-        </div>
-        
-        {/* Back to Home */}
-        <div className="text-center mt-8">
-          <a 
-            href="/" 
-            className="text-primary hover:underline flex items-center justify-center gap-2"
-          >
-            <i className="fas fa-arrow-left"></i>
-            <span>Retour à l'accueil</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <AuthLayout 
+      title="LuxStay" 
+      subtitle="Connectez-vous à votre compte"
+      footerContent={footerContent}
+    >
+      <LoginForm 
+        onSubmit={handleLoginSubmit}
+        onForgotPassword={handleForgotPassword}
+        onRegister={handleRegister}
+        onSocialLogin={handleSocialLogin}
+      />
+    </AuthLayout>
   );
 };
 
