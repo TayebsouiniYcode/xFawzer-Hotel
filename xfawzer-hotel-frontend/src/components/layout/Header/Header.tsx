@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../common/Button';
 import MobileMenu from './MobileMenu';
 import { MenuItem } from '../../../types/common.types';
@@ -39,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
     <header className={`bg-white shadow-md fixed w-full z-10 transition-all ${isScrolled ? 'py-2' : 'py-3'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-primary">xFawzer</h1>
+          <h1 className="text-2xl font-bold text-primary">LuxStay</h1>
         </div>
         
         <nav className="hidden md:flex space-x-8">
@@ -55,26 +56,9 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
         </nav>
         
         <div className="hidden md:block">
-          <div className='flex gap-4'>
-          <div>
           <Button href="#reserver" variant="primary">
             Réserver
           </Button>
-          </div>
-          
-          <div>
-          <Button href="/logn" variant="primary">
-            Login
-          </Button>
-          </div>
-
-          <div>
-          <Button href="/register" variant="outline">
-            Register
-          </Button>
-          </div>
-          </div>
-
         </div>
         
         <button 
