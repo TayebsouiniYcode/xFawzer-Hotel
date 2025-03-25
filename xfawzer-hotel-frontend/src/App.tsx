@@ -1,21 +1,36 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+// Pages publiques
 import Home from './pages/Home/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import RoomManagement from './pages/admin/RoomManagement';
+// Importer d'autres pages publiques si nécessaire
+
+// Routes admin
+import AdminRoutes from './routes/AdminRoutes';
+
+// Contexte d'authentification (à implémenter)
+// import { AuthProvider } from './contexts/AuthContext';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/admin" element={<Navigate to="/admin/dashboard" />} />
-        <Route path="/admin/rooms" element={<RoomManagement />} />
-      </Routes>
-    </BrowserRouter>
+    // <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Routes publiques */}
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          
+          {/* Routes admin - utilise un layout partagé et des routes imbriquées */}
+          <Route path="/admin/*" element={<AdminRoutes />} />
+          
+          {/* Redirection par défaut */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    // </AuthProvider>
   );
 };
 

@@ -26,7 +26,7 @@ const RoomFilters: React.FC<RoomFiltersProps> = ({ filters, onFilterChange }) =>
               name="roomType"
               value={filters.roomType}
               onChange={handleChange}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
+              className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-900 focus:ring focus:ring-primary focus:ring-opacity-50"
             >
               <option value="">Tous les types</option>
               <option value="standard">Standard</option>

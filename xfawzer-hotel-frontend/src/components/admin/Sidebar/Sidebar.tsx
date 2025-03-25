@@ -12,7 +12,7 @@ const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
   return (
     <aside className="bg-blue-900 text-white w-64 flex-shrink-0 hidden md:block overflow-y-auto h-full">
       <div className="p-4 border-b border-blue-800">
-        <h1 className="text-2xl font-bold">LuxStay Admin</h1>
+        <h1 className="text-2xl font-bold">xFawzer Dashboard</h1>
       </div>
       
       <nav className="mt-6">

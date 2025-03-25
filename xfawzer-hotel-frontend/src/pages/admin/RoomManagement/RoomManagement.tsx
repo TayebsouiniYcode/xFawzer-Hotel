@@ -13,8 +13,8 @@ import { RoomDetails, FilterOptions, RoomFormData, AdminUser, NotificationType }
 // Données fictives pour le développement
 const dummyUser: AdminUser = {
   id: '1',
-  name: 'Thomas Dubois',
-  email: 'thomas.dubois@luxstay.com',
+  name: 'Tayeb SOUINI',
+  email: 'TayebSOUINI.2@gmail.com',
   avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
   role: 'admin'
 };
