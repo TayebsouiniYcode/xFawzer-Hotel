@@ -18,7 +18,7 @@ const defaultCategories: SidebarCategory[] = [
     title: 'Principal',
     items: [
       { label: 'Dashboard', icon: 'fas fa-tachometer-alt', href: '/admin/dashboard' },
-      { label: 'Réservations', icon: 'fas fa-calendar-check', href: '/admin/reservations' },
+      { label: 'Réservations', icon: 'fas fa-calendar-check', href: '/admin/bookings' },
       { label: 'Chambres', icon: 'fas fa-door-open', href: '/admin/rooms' },
       { label: 'Clients', icon: 'fas fa-users', href: '/admin/clients' },
     ]
@@ -26,7 +26,7 @@ const defaultCategories: SidebarCategory[] = [
   {
     title: 'Gestion',
     items: [
-      { label: 'Personnel', icon: 'fas fa-user-tie', href: '/admin/staff' },
+      { label: 'Personnel', icon: 'fas fa-user-tie', href: '/admin/employees' },
       { label: 'Services', icon: 'fas fa-concierge-bell', href: '/admin/services' },
       { label: 'Rapports', icon: 'fas fa-chart-line', href: '/admin/reports' },
     ]

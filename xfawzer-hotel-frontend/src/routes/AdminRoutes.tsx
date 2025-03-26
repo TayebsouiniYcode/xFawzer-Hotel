@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import RoomManagement from '../pages/admin/RoomManagement';
 import BookingManagement from '../pages/admin/BookingManagement';
+import EmployeeManagement from '../pages/admin/EmployeeManagement/EmployeeManagement';
 // import AdminDashboard from '../pages/admin/RoomManagement';
 
 // Importez d'autres pages admin ici
@@ -27,6 +28,8 @@ const AdminRoutes: React.FC<AdminRoutesProps> = ({ isAuthenticated = true }) => 
       {/* <Route path="dashboard" element={<AdminDashboard />} /> */}
       <Route path="rooms" element={<RoomManagement />} />
       <Route path="bookings" element={<BookingManagement />} />
+      <Route path="/employees" element={<EmployeeManagement />} />
+
       
       {/* Uncomment these routes as you implement the corresponding pages
       <Route path="clients" element={<ClientManagement />} />

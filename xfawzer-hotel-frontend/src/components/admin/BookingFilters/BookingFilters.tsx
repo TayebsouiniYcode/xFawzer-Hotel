@@ -41,7 +41,7 @@ const BookingFilters: React.FC<BookingFiltersProps> = ({
     <div className="bg-white rounded-lg shadow-md p-6 mb-6 transition-all duration-300">
       <div className="flex flex-col space-y-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          <i className="fas fa-filter text-primary mr-2"></i>
+          <i className="fas fa-filter text-blue-900 mr-2"></i>
           Filtres de recherche
         </h3>
         
@@ -139,7 +139,7 @@ const BookingFilters: React.FC<BookingFiltersProps> = ({
             <div className="flex space-x-3">
               <button 
                 onClick={onApplyFilters}
-                className="flex-none bg-primary text-white px-5 py-2.5 rounded-md hover:bg-blue-700 transition shadow-sm flex items-center"
+                className="flex-none bg-blue-900 text-white px-5 py-2.5 rounded-md hover:bg-blue-700 transition shadow-sm flex items-center"
               >
                 <i className="fas fa-filter mr-2"></i> Appliquer
               </button>
